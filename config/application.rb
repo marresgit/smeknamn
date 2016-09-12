@@ -15,16 +15,18 @@ module SthlmOut
     config.action_mailer.smtp_settings = {
       address: "smtp.gmail.com",
       port: 587,
-      domain: "example.tld",
-      user_name: "luffe41@gmail.com",
-      password: "jessijames@13",
+      domain: Rails.application.secrets.domain_name,
+      user_name: Rails.application.secrets.email_username,
+      password: Rails.application.secrets.email_password,
       autentication: "plain",
       enable_starttls_auto: true
     }
 
-    config.action_mailer.default_url_option = {
-      host: "BEAST.org"
-    }
+    # ActionMailer Config
+      config.action_mailer.default_url_options = { :host => Rails.application.secrets.domain_name }
+      config.action_mailer.delivery_method = :smtp
+      config.action_mailer.perform_deliveries = true
+      config.action_mailer.raise_delivery_errors = false
 
   end
 end
