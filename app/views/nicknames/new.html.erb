@@ -1,0 +1,19 @@
+<h1>New Nickname</h1>
+
+
+
+<%= form_for :nickname, url: nicknames_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :nickname %><br>
+    <%= f.text_field :nick %><br>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
