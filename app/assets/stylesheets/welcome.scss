@@ -3,8 +3,23 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #main {
-  width:30%;
+  width:70%;
   margin:auto;
   margin-top:2cm;
+  border-width:1px;
+  border-style:solid;
 }
+
+h1 {
+  text-align:center;
+}
+
+.MainTable {
+  width:50%;
+  margin:auto;
+  margin-top:1cm;
+  margin-bottom:1cm;
+}
+
+
 

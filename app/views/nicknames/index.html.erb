@@ -1,0 +1,16 @@
+<h1>List Names & Nicknames</h1>
+
+<table class="MainTable">
+  <tr>
+    <th>Name</th>
+    <th>Nickname</th>
+  </tr>
+
+  <% @nickname.each do |nicknames| %>
+    <tr>
+      <td><%= nicknames.name %></td>
+      <td><%= nicknames.nick %></td>
+      <td><%= link_to 'Show', nickname_path(nicknames) %></td>
+    </tr>
+  <% end %>
+</table>

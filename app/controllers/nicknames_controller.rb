@@ -1,5 +1,13 @@
 class NicknamesController < ApplicationController
 
+  def index
+    @nickname = Nickname.all
+  end
+
+  def show
+    @nickname = Nickname.find(params[:id])
+  end
+
   def new
   end
 
