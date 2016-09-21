@@ -13,6 +13,9 @@
       <td><%= nicknames.nick %></td>
       <td><%= link_to 'Show', nickname_path(nicknames) %></td>
       <td><%= link_to 'Edit', edit_nickname_path(nicknames) %></td>
+      <td><%= link_to 'Destroy', nickname_path(nicknames), 
+        method: :delete,
+        data: { confirm: 'Are you sure?'} %></td>
     </tr>
   <% end %>
 </table>

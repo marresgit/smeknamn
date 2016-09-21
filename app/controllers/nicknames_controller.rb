@@ -36,6 +36,13 @@ class NicknamesController < ApplicationController
     end
   end
 
+  def destroy
+    @nickname = Nickname.find(params[:id])
+    @nickname.destroy
+
+    redirect_to @nickname
+  end
+
 private
   def nickname_params
     params.require(:nickname).permit(:name, :nick)
