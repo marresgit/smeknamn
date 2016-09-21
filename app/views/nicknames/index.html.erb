@@ -4,6 +4,7 @@
   <tr>
     <th>Name</th>
     <th>Nickname</th>
+    <th colspan="2"></th>
   </tr>
 
   <% @nickname.each do |nicknames| %>
@@ -11,6 +12,7 @@
       <td><%= nicknames.name %></td>
       <td><%= nicknames.nick %></td>
       <td><%= link_to 'Show', nickname_path(nicknames) %></td>
+      <td><%= link_to 'Edit', edit_nickname_path(nicknames) %></td>
     </tr>
   <% end %>
 </table>

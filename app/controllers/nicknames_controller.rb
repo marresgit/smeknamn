@@ -26,6 +26,16 @@ class NicknamesController < ApplicationController
     end
   end
 
+  def update
+    @nickname = Nickname.find(params[:id])
+
+    if @nickname.update(nickname_params)
+      redirect_to @nickname
+    else
+      render 'edit'
+    end
+  end
+
 private
   def nickname_params
     params.require(:nickname).permit(:name, :nick)
