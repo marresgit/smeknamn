@@ -9,7 +9,9 @@
   </head>
 
   <body>
-    <div id="main">
+    <div id="main"> 
+    <%= link_to 'Home', nicknames_path %>
+    <%= link_to 'New', new_nickname_url %>
   
     <%= yield %>
     </div>

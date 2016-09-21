@@ -3,23 +3,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 #main {
-  width:70%;
-  margin:auto;
-  margin-top:2cm;
-  border-width:1px;
-  border-style:solid;
+  width: 70%;
+  margin: auto;
+  margin-top: 2cm;
+  border-width: 1px;
+  border-style: solid;
 }
 
 h1 {
-  text-align:center;
+  text-align: center;
 }
 
 .MainTable {
-  width:50%;
-  margin:auto;
-  margin-top:1cm;
-  margin-bottom:1cm;
+  width: 50%;
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
 }
 
+.new_form {
+  margin: auto;
+  border-with: 1px;
+  border-stytle: solid;
+}
+
+
+#error_explanation {
+  width: 50%;
+  border-width: 4px;
+  border-style: solid;
+  border-color: #F08080;
+  font-size: 70%;
+  color: red;
+}
 
 

@@ -9,13 +9,21 @@ class NicknamesController < ApplicationController
   end
 
   def new
+    @nickname = Nickname.new 
+  end
+
+  def edit
+   @nickname = Nickname.find(params[:id]) 
   end
 
   def create
   	@nickname = Nickname.new(nickname_params)
 
-  	@nickname.save
-  	redirect_to @nickname
+  	if @nickname.save
+  	  redirect_to @nickname
+    else
+      render 'new'
+    end
   end
 
 private

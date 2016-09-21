@@ -3,17 +3,33 @@
 
 
 <%= form_for :nickname, url: nicknames_path do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
+  
+  <% if @nickname.errors.any? %>
+    <div id="error_explanation">
+      <h6>
+        <%= pluralize(@nickname.errors.count, "error") %> prohibited this article from being saved:
+      </h6>
+      <ul>
+        <% @nickname.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="new_form">
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
 
-  <p>
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nick %><br>
-  </p>
+    <p>
+      <%= f.label :nickname %><br>
+      <%= f.text_field :nick %><br>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
 <% end %>
