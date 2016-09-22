@@ -9,11 +9,14 @@
   </head>
 
   <body>
-    <div id="main"> 
-    <%= link_to 'Home', nicknames_path %>
-    <%= link_to 'New', new_nickname_url %>
+    <div id="main">
+      <ul class="nav nav-tabs">
+      <li role="presentation"> <%= link_to 'Home', nicknames_path %></li>
+      <li role="presentation"><%= link_to 'New', new_nickname_url %></li>
+      </ul>
+     
   
-    <%= yield %>
+      <%= yield %>
     </div>
   </body>
 </html>
