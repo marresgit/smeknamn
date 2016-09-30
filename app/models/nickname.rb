@@ -10,11 +10,7 @@ class Nickname < ApplicationRecord
   							 :too_long => 'too long'}		   
   
   def self.search(search)
-  	if search
-  	  find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
-  	else
-  	  find(:all)
-  	end
+    where("name LIKE ? or nick LIKE ?", "%#{search}", "%#{search}")
   end
 
 end

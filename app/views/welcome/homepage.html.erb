@@ -2,6 +2,7 @@
 <h1>Go ahead and search for names or nicknames</h1>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <div class="container">
   <div class="row">
     <div class="col-lg-6">
@@ -25,4 +26,19 @@
     <%= button_tag "Search", name: nil %>
   <% end %>
 </div>
+>>>>>>> search-function-1.1
+=======
+
+<%= form_tag(root_path, :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @nickname.present? %>
+    <%= @nickname.each do |nickname| %>
+    <p>Woop woop </p>
+    <% end %>
+<% else %>
+  <p> Cant find <%= params[:search] %> in the database.</p>
+<% end %>
 >>>>>>> search-function-1.1
