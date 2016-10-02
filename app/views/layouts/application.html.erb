@@ -9,21 +9,11 @@
   </head>
 
   <body>
-<<<<<<< HEAD
-    <div id="main">
-      <ul class="nav nav-tabs">
-      <li role="presentation"> <%= link_to 'Home', nicknames_path %></li>
-      <li role="presentation"><%= link_to 'New', new_nickname_url %></li>
-      </ul>
-     
-=======
     <div id="main"> 
     <%= link_to 'Main', root_path %>
     <%= link_to 'Admin', nicknames_path %>
     <%= link_to 'New', new_nickname_url %>
->>>>>>> search-function-1.1
-  
-      <%= yield %>
+    <%= yield %>
     </div>
   </body>
 </html>

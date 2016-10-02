@@ -1,44 +1,9 @@
 
 <h1>Go ahead and search for names or nicknames</h1>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<div class="container">
-  <div class="row">
-    <div class="col-lg-6">
-      <div class="input-group">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-        <input type="text" class="form-control" placeholder="Search for...">
-      </div><!-- /input-group -->
-    </div><!-- /.col-lg-6 -->
-  </div><!-- /.row -->
-</div>
-
-
-
-
-=======
-<div class="search_bar">
-  <%= form_tag root_path, method: "get" do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= button_tag "Search", name: nil %>
-  <% end %>
-</div>
->>>>>>> search-function-1.1
-=======
-
 <%= form_tag(root_path, :method => "get", id: "search-form") do %>
   <%= text_field_tag :search, params[:search] %>
   <%= submit_tag "Search", :name => nil %>
 <% end %>
 
-<% if @nickname.present? %>
-    <%= @nickname.each do |nickname| %>
-    <p>Woop woop </p>
-    <% end %>
-<% else %>
-  <p> Cant find <%= params[:search] %> in the database.</p>
-<% end %>
->>>>>>> search-function-1.1
+
