@@ -12,6 +12,7 @@
     <% @nickname.each do |nicknames| %>
       <%= nicknames.name %>
       <%= nicknames.nick %>
+      <%= nicknames.addnick %>
     <% end %>
   <% else %>
     <p>There are no posts containing the term(s) <%= params[:search] %>.</p>

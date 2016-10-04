@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160920114016) do
+ActiveRecord::Schema.define(version: 20161004095847) do
 
   create_table "nicknames", force: :cascade do |t|
     t.string   "name"
     t.string   "nick"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "addnick"
   end
 
 end
