@@ -45,7 +45,7 @@ class NicknamesController < ApplicationController
 
 private
   def nickname_params
-    params.require(:nickname).permit(:name, :nick)
+    params.require(:nickname).permit(:name, :nick, :nicknametwo, :nicknamethree, :nicknamefour, :nicknamefive)
   end
 
 end

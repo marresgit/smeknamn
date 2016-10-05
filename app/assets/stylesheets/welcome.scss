@@ -10,7 +10,7 @@
   border-style: solid;
 }
 
-h1 {
+h2 {
   text-align: center;
 }
 
@@ -22,38 +22,42 @@ h1 {
   margin-bottom: 1cm;
 }
 
-.the_form{
+
+.new_form {
   width: 21%;
   border-style: solid;
-  border_width: 0px;
+  border-width: 0px;
   margin: auto;
   margin-top: 1cm;
   margin-bottom: 1cm;
-
-}
-
-.new_form {
-  margin: auto;
-  border-width: 0px;
-  border-stytle: solid;
 }
 
 
 #error_explanation {
   width: 50%;
-  border-width: 4px;
-  border-style: solid;
-  border-color: #F08080;
   font-size: 70%;
   color: red;
 }
 
-.search_bar {
+.search-bar {
   margin: auto;
   margin-top: 1cm;
   margin-bottom: 1cm;
-  width: 39%;
+  width: 29%;
+  border-style: solid;
+  border-width: 0px;
+}
+
+.search-result{
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  width: 29%;
   border-style: solid;
   border-width: 0px;
 
 }
+
+
+
+
