@@ -1,7 +1,7 @@
 class MessageMailer < ApplicationMailer
 
   default from: "Your BEAST Mailer <noreply@example.com>"
-  default to: "Your Name <your.email@example.com>"
+  default to: "Your Name <luffe41@gmail.com>"
 
 
   def new_message(message)
