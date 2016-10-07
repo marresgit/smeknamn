@@ -1,22 +1,24 @@
-<h2>List Names & Nicknames</h2>
+<h1>List Names & Nicknames</h1>
 
-<table class="MainTable">
-  <tr>
-    <th>Name</th>
-    <th>Nickname</th>
-    <th colspan="2"></th>
-  </tr>
-
-  <% @nickname.each do |nicknames| %>
+<div class="main-div">
+  <table class="database-table">
     <tr>
-      <td><%= nicknames.name %></td>
-      <td><%= nicknames.nick %></td>
-      <td><%= nicknames.nicknametwo %></td>
-      <td><%= link_to 'Show', nickname_path(nicknames) %></td>
-      <td><%= link_to 'Edit', edit_nickname_path(nicknames) %></td>
-      <td><%= link_to 'Destroy', nickname_path(nicknames), 
-        method: :delete,
-        data: { confirm: 'Are you sure?'} %></td>
+      <th>Name</th>
+      <th>Nickname</th>
+      <th colspan="2"></th>
     </tr>
-  <% end %>
-</table>
+
+    <% @nickname.each do |nicknames| %>
+      <tr>
+        <td><%= nicknames.name %></td>
+        <td><%= nicknames.nick %></td>
+        <td><%= nicknames.nicknametwo %></td>
+        <td><%= link_to 'Show', nickname_path(nicknames) %></td>
+        <td><%= link_to 'Edit', edit_nickname_path(nicknames) %></td>
+        <td><%= link_to 'Destroy', nickname_path(nicknames), 
+          method: :delete,
+          data: { confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>

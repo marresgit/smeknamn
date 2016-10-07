@@ -10,11 +10,13 @@
 
   <body>
     <div id="main"> 
-    <%= link_to 'Main', root_path %>
-    <%= link_to 'Admin', nicknames_path %>
-    <%= link_to 'New', new_nickname_url %>
-    <%= link_to 'SendIn', contact_url %>
-    <%= yield %>
+      <ul class="nav nav-tabs">
+        <li role="presentation"><%= link_to 'Main', root_path %></li>
+        <li role="presentation"><%= link_to 'Admin', nicknames_path %></li>
+        <li role="presentation"><%= link_to 'New', new_nickname_url %></li>
+        <li role="presentation"><%= link_to 'SendIn', contact_url %></li>
+      </ul>
+        <%= yield %>
     </div>
   </body>
 </html>

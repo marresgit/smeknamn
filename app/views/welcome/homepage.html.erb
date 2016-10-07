@@ -1,26 +1,34 @@
 
 <h3>Go ahead and search for names or nicknames</h3>
 
-<div class="search-bar">
-  <%= form_tag(root_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
-
-<div class="search-result">
-  <% if params[:search].present? %>
-    <% if @nickname.present? %>
-      <% @nickname.each do |nicknames| %>
-        <%= nicknames.name %>
-        <%= nicknames.nick %>
-        <%= nicknames.nicknametwo %>
-        <%= nicknames.nicknamethree %>
-        <%= nicknames.nicknamefour %>
-        <%= nicknames.nicknamefive %>
-      <% end %>
-    <% else %>
-      <p>There is no <%= params[:search] %> in the database .</p>
+<div class="home-page">
+  <div class="search-bar">
+    <%= form_tag(root_path, :method => "get", id: "search-form") do %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
     <% end %>
-  <% end %>
+  </div>
+
+  <div class="search-bar">
+    <% if params[:search].present? %>
+      <% if @nickname.present? %>
+        <% @nickname.each do |nicknames| %>
+
+        <ul class="list-name">
+          <li class="list-group-item"><%= nicknames.name %></li>
+        </ul>             
+
+        <ul class="list-nick">
+          <li class="list-group-item"><%= nicknames.nick %></li>
+          <li class="list-group-item"><%= nicknames.nicknametwo %></li>
+          <li class="list-group-item"><%= nicknames.nicknamethree %></li>
+          <li class="list-group-item"><%= nicknames.nicknamefour %></li>
+          <li class="list-group-item"><%= nicknames.nicknamefive %></li>
+        </ul>
+        <% end %>
+      <% else %>
+        <p>There is no <%= params[:search] %> in the database .</p>
+      <% end %>
+    <% end %>
+  </div>
 </div>

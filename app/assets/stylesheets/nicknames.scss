@@ -3,12 +3,40 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
+.main-div {
+  width: 70%;
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  border-width: 1px;
+  border-style: solid;
+}
 
-
-
+.database-table {
+  width: 50%;
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
+  border-width: 0px;
+  border-style: solid;
+}
 
 .new_form {
   margin: auto;
   border-with: 0px;
   border-stytle: solid;
+}
+
+#error_explanation {
+  width: 50%;
+  color: red;
+}
+
+.new_form {
+  width: 21%;
+  border-style: solid;
+  border-width: 0px;
+  margin: auto;
+  margin-top: 1cm;
+  margin-bottom: 1cm;
 }

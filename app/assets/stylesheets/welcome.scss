@@ -2,41 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#main {
+.home-page {
   width: 70%;
   margin: auto;
-  margin-top: 2cm;
+  margin-top: 0cm;
   border-width: 1px;
   border-style: solid;
 }
 
-h2 {
+h1 {
   text-align: center;
-}
-
-
-.MainTable {
-  width: 50%;
-  margin: auto;
-  margin-top: 1cm;
-  margin-bottom: 1cm;
-}
-
-
-.new_form {
-  width: 21%;
-  border-style: solid;
-  border-width: 0px;
-  margin: auto;
-  margin-top: 1cm;
-  margin-bottom: 1cm;
-}
-
-
-#error_explanation {
-  width: 50%;
-  font-size: 70%;
-  color: red;
 }
 
 .search-bar {
@@ -48,16 +23,26 @@ h2 {
   border-width: 0px;
 }
 
-.search-result{
+.search-bar {
   margin: auto;
   margin-top: 1cm;
   margin-bottom: 1cm;
   width: 29%;
   border-style: solid;
   border-width: 0px;
-
 }
 
+.search-result {
+  margin: auto;
+  margin-top: 0cm;
+  margin-bottom: 0cm;
+  border-style: solid;
+  border-width: 1px;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
 
 
 
