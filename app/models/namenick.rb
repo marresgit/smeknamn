@@ -1,0 +1,2 @@
+class Namenick < ApplicationRecord
+end

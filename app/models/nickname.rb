@@ -10,7 +10,7 @@ class Nickname < ApplicationRecord
   							 :too_long => 'too long'}		   
   
   def self.search(search)
-    where("name LIKE ? or nick LIKE ?", "%#{search}", "%#{search}")
+    where("name LIKE ? ", "%#{search}")
   end
 
 end
