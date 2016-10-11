@@ -13,17 +13,27 @@
     <% if params[:search].present? %>
       <% if @nickname.present? %>
         <% @nickname.each do |nicknames| %>
-
         <ul class="list-name">
+          <li class="sign"><h4>Name</h4></li>
           <li class="list-group-item"><%= nicknames.name %></li>
-        </ul>             
-
+        </ul>
         <ul class="list-nick">
+          <li class="sign"><h4>Nick</h4></li>
+          <% if nicknames.nick.present? %>
           <li class="list-group-item"><%= nicknames.nick %></li>
+          <% end %>
+          <% if nicknames.nicknametwo.present? %>
           <li class="list-group-item"><%= nicknames.nicknametwo %></li>
+          <% end %>
+          <% if nicknames.nicknamethree.present? %>
           <li class="list-group-item"><%= nicknames.nicknamethree %></li>
+          <% end %>
+          <% if nicknames.nicknamefour.present? %>
           <li class="list-group-item"><%= nicknames.nicknamefour %></li>
-          <li class="list-group-item"><%= nicknames.nicknamefive %></li>
+          <% end %>
+          <% if nicknames.nicknamefive.present? %>
+          <li class="list-group-item"><%= nicknames.nicknamefive%></li>
+          <% end %>
         </ul>
         <% end %>
       <% else %>

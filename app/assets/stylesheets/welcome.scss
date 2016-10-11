@@ -37,11 +37,20 @@ h1 {
   margin-top: 0cm;
   margin-bottom: 0cm;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
 }
 
-table, th, td {
-  border: 1px solid black;
+ul {
+  padding: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.sign {
+  padding: 5px;
+  display: inline-block;
+  border-style: solid;
+  border-width: 0px;
 }
 
 
