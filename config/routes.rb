@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'welcome/homepage'
+  get 'welcome/new'
 
   root 'welcome#homepage'
 
@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   post 'contact', to: 'messages#create'
 
   resources :nicknames
+  resources :namenicks
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

@@ -3,8 +3,7 @@ class WelcomeController < ApplicationController
   def homepage
     if params[:search]
       @nickname = Nickname.search(params[:search])
-    elsif params[:searchnick]
-      @namenick = Namenick.search(params[:searchnick])    	
+      @namenick = Namenick.search(params[:search])    	
     else
       @nickname = Nickname.all
       @namenick = Namenick.all

@@ -11,7 +11,7 @@
 
   <div class="search-bar">
     <% if params[:search].present? %>
-      <% if @nickname.present? %>
+      <% if @nickname.present? || @namenick.present? %>
         <% @nickname.each do |nicknames| %>
         <ul class="list-name">
           <li class="sign"><h4>Name</h4></li>
@@ -32,7 +32,7 @@
           <li class="list-group-item"><%= nicknames.nicknamefour %></li>
           <% end %>
           <% if nicknames.nicknamefive.present? %>
-          <li class="list-group-item"><%= nicknames.nicknamefive%></li>
+          <li class="list-group-item"><%= nicknames.nicknamefive %></li>
           <% end %>
         </ul>
         <% end %>

@@ -1,0 +1,47 @@
+<%= form_for @namenick do |f| %>
+  
+  <% if @namenick.errors.any? %>
+    <div id="error_explanation">
+      <h6>
+        <%= pluralize(@namenick.errors.count, "error") %> prohibited this article from being saved:
+      </h6>
+      <ul>
+        <% @namenick.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="new_form">
+    <p>
+      <%= f.label :nickname %><br>
+      <%= f.text_field :nickname %>
+    </p>
+
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :namenick %><br>
+    </p>
+    
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :namenicktwo %><br>
+    </p>
+    
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :namenickthree %><br>
+    </p>
+
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :namenickfour %><br>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+  </div>
+<% end %>
+

@@ -1,0 +1,24 @@
+<h1>List Names & Nicknames</h1>
+
+<div class="main-div">
+  <table class="database-table">
+    <tr>
+      <th>Name</th>
+      <th>Nickname</th>
+      <th colspan="2"></th>
+    </tr>
+
+    <% @namenick.each do |namenicks| %>
+      <tr>
+        <td><%= namesnicks.name %></td>
+        <td><%= namenicks.nick %></td>
+        <td><%= namenicks.nicknametwo %></td>
+        <td><%= link_to 'Show', namenick_path(namenicks) %></td>
+        <td><%= link_to 'Edit', edit_namenick_path(namenicks) %></td>
+        <td><%= link_to 'Destroy', namenick_path(namenicks), 
+          method: :delete,
+          data: { confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
