@@ -11,7 +11,7 @@
 
   <div class="search-bar">
     <% if params[:search].present? %>
-      <% if @nickname.present? || @namenick.present? %>
+      <% if @nickname.present? %>
         <% @nickname.each do |nicknames| %>
         <ul class="list-name">
           <li class="sign"><h4>Name</h4></li>
@@ -33,6 +33,31 @@
           <% end %>
           <% if nicknames.nicknamefive.present? %>
           <li class="list-group-item"><%= nicknames.nicknamefive %></li>
+          <% end %>
+        </ul>
+        <% end %>
+      <% elsif @namenick.present? %>
+        <% @namenick.each do |namenicks| %>
+        <ul class="list-name">
+          <li class="sign"><h4>Name</h4></li>
+          <li class="list-group-item"><%= namenicks.nickname %></li>
+        </ul>
+        <ul class="list-nick">
+          <li class="sign"><h4>Nick</h4></li>
+          <% if namenicks.nickname.present? %>
+          <li class="list-group-item"><%= namenicks.namenick %></li>
+          <% end %>
+          <% if namenicks.namenicktwo.present? %>
+          <li class="list-group-item"><%= namenicks.namenicktwo %></li>
+          <% end %>
+          <% if namenicks.namenickthree.present? %>
+          <li class="list-group-item"><%= namenicks.namenickthree %></li>
+          <% end %>
+          <% if namenicks.namenickfour.present? %>
+          <li class="list-group-item"><%= namenicks.namenickfour %></li>
+          <% end %>
+          <% if namenicks.namenickfive.present? %>
+          <li class="list-group-item"><%= namenicks.namenickfive %></li>
           <% end %>
         </ul>
         <% end %>
