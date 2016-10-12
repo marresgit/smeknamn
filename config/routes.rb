@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'welcome/new'
+  get 'welcome/admin'
 
   root 'welcome#homepage'
 

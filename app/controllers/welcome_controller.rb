@@ -11,5 +11,9 @@ class WelcomeController < ApplicationController
 
   end
 
+  def admin
+    @nickname = Nickname.all
+    @namenick = Namenick.all
+  end
 
 end
