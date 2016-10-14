@@ -10,13 +10,17 @@
 
   <body>
     <div id="main"> 
-      <ul class="nav nav-tabs">
-        <li role="presentation"><%= link_to 'Main', root_path %></li>
-        <li role="presentation"><%= link_to 'Admin', welcome_admin_url %></li>
-        <li role="presentation"><%= link_to 'New', welcome_new_url  %></li>
-        <li role="presentation"><%= link_to 'SendIn', contact_url %></li>
-      </ul>
-        <%= yield %>
-    </div>
+      <div id="nav-container">
+        <div class="center-nav">
+          <ul class="nav nav-tabs" class="nav">
+            <li role="presentation"><%= link_to 'Main', root_path %></li>
+            <li role="presentation"><%= link_to 'Admin', welcome_admin_url %></li>
+            <li role="presentation"><%= link_to 'New', welcome_new_url  %></li>
+            <li role="presentation"><%= link_to 'SendIn', contact_url %></li>
+          </ul>
+            <%= yield %>
+        </div><!--.navbar-inner-->    
+      </div><!--container-->
+    </div><!--main-->
   </body>
 </html>
