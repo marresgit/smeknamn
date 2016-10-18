@@ -9,18 +9,21 @@
   </head>
 
   <body>
-    <div id="main"> 
-      <div id="nav-container">
-        <div class="center-nav">
-          <ul class="nav nav-tabs" class="nav">
-            <li role="presentation"><%= link_to 'Main', root_path %></li>
-            <li role="presentation"><%= link_to 'Admin', welcome_admin_url %></li>
-            <li role="presentation"><%= link_to 'New', welcome_new_url  %></li>
-            <li role="presentation"><%= link_to 'SendIn', contact_url %></li>
-          </ul>
-            <%= yield %>
-        </div><!--.navbar-inner-->    
-      </div><!--container-->
-    </div><!--main-->
+    <div class="container">
+      <nav class="navbar navbar-light bg-faded">
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Main', root_path %></li>
+          <li><%= link_to 'Admin', welcome_admin_url %></li>
+          <li><%= link_to 'New', welcome_new_url  %></li>
+          <li><%= link_to 'SendIn', contact_url %></li>
+        </ul>
+      </div><!--.nav-->    
+    </div><!--.container-->
+
+
+    <div class="container">
+      <%= yield %>
+    </div><!--.container-->
+
   </body>
 </html>

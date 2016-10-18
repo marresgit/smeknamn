@@ -1,69 +1,72 @@
 
-<h3>Go ahead and search for names or nicknames</h3>
+<div class="container">
+  <h3>Go ahead and search for names or nicknames</h3>
 
-<div class="home-page">
-  <div class="search-bar">
-    <%= form_tag(root_path, :method => "get", id: "search-form") do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", :name => nil %>
-    <% end %>
-  </div>
-
-  <div class="search-bar">
-    <% if params[:search].present? %>
-      <% if @nickname.present? %>
-        <% @nickname.each do |nicknames| %>
-        <ul class="list-name">
-          <li class="sign"><h4>Name</h4></li>
-          <li class="list-group-item"><%= nicknames.name %></li>
-        </ul>
-        <ul class="list-nick">
-          <li class="sign"><h4>Nick</h4></li>
-          <% if nicknames.nick.present? %>
-          <li class="list-group-item"><%= nicknames.nick %></li>
-          <% end %>
-          <% if nicknames.nicknametwo.present? %>
-          <li class="list-group-item"><%= nicknames.nicknametwo %></li>
-          <% end %>
-          <% if nicknames.nicknamethree.present? %>
-          <li class="list-group-item"><%= nicknames.nicknamethree %></li>
-          <% end %>
-          <% if nicknames.nicknamefour.present? %>
-          <li class="list-group-item"><%= nicknames.nicknamefour %></li>
-          <% end %>
-          <% if nicknames.nicknamefive.present? %>
-          <li class="list-group-item"><%= nicknames.nicknamefive %></li>
-          <% end %>
-        </ul>
-        <% end %>
-      <% elsif @namenick.present? %>
-        <% @namenick.each do |namenicks| %>
-        <ul class="list-name">
-          <li class="sign"><h4>Name</h4></li>
-          <li class="list-group-item"><%= namenicks.nickname %></li>
-        </ul>
-        <ul class="list-nick">
-          <li class="sign"><h4>Nick</h4></li>
-          <% if namenicks.nickname.present? %>
-          <li class="list-group-item"><%= namenicks.namenick %></li>
-          <% end %>
-          <% if namenicks.namenicktwo.present? %>
-          <li class="list-group-item"><%= namenicks.namenicktwo %></li>
-          <% end %>
-          <% if namenicks.namenickthree.present? %>
-          <li class="list-group-item"><%= namenicks.namenickthree %></li>
-          <% end %>
-          <% if namenicks.namenickfour.present? %>
-          <li class="list-group-item"><%= namenicks.namenickfour %></li>
-          <% end %>
-          <% if namenicks.namenickfive.present? %>
-          <li class="list-group-item"><%= namenicks.namenickfive %></li>
-          <% end %>
-        </ul>
-        <% end %>
-      <% else %>
-        <p>There is no <%= params[:search] %> in the database .</p>
+  <div class="home-page">
+    <div class="search-bar">
+      <%= form_tag(root_path, :method => "get", id: "search-form") do %>
+        <%= text_field_tag :search, params[:search] %>
+        <%= submit_tag "Search", :name => nil %>
       <% end %>
-    <% end %>
+    </div>
+
+    <div class="search-bar">
+      <% if params[:search].present? %>
+        <% if @nickname.present? %>
+          <% @nickname.each do |nicknames| %>
+          <ul class="list-name">
+            <li class="sign"><h4>Name</h4></li>
+            <li class="list-group-item"><%= nicknames.name %></li>
+          </ul>
+          <ul class="list-nick">
+            <li class="sign"><h4>Nick</h4></li>
+            <% if nicknames.nick.present? %>
+            <li class="list-group-item"><%= nicknames.nick %></li>
+            <% end %>
+            <% if nicknames.nicknametwo.present? %>
+            <li class="list-group-item"><%= nicknames.nicknametwo %></li>
+            <% end %>
+            <% if nicknames.nicknamethree.present? %>
+            <li class="list-group-item"><%= nicknames.nicknamethree %></li>
+            <% end %>
+            <% if nicknames.nicknamefour.present? %>
+            <li class="list-group-item"><%= nicknames.nicknamefour %></li>
+            <% end %>
+            <% if nicknames.nicknamefive.present? %>
+            <li class="list-group-item"><%= nicknames.nicknamefive %></li>
+            <% end %>
+          </ul>
+          <% end %>
+        <% elsif @namenick.present? %>
+          <% @namenick.each do |namenicks| %>
+          <ul class="list-name">
+            <li class="sign"><h4>Name</h4></li>
+            <li class="list-group-item"><%= namenicks.nickname %></li>
+          </ul>
+          <ul class="list-nick">
+            <li class="sign"><h4>Nick</h4></li>
+            <% if namenicks.nickname.present? %>
+            <li class="list-group-item"><%= namenicks.namenick %></li>
+            <% end %>
+            <% if namenicks.namenicktwo.present? %>
+            <li class="list-group-item"><%= namenicks.namenicktwo %></li>
+            <% end %>
+            <% if namenicks.namenickthree.present? %>
+            <li class="list-group-item"><%= namenicks.namenickthree %></li>
+            <% end %>
+            <% if namenicks.namenickfour.present? %>
+            <li class="list-group-item"><%= namenicks.namenickfour %></li>
+            <% end %>
+            <% if namenicks.namenickfive.present? %>
+            <li class="list-group-item"><%= namenicks.namenickfive %></li>
+            <% end %>
+          </ul>
+          <% end %>
+        <% else %>
+          <p>There is no <%= params[:search] %> in the database .</p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
+

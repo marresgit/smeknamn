@@ -6,20 +6,20 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module SthlmOut
+module Smeknamn
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
     # Action Mailer settings:
     config.action_mailer.smtp_settings = {
-      address: "smtp.gmail.com",
-      port: 587,
-      domain: Rails.application.secrets.domain_name,
-      user_name: Rails.application.secrets.email_username,
-      password: Rails.application.secrets.email_password,
-      autentication: "plain",
-      enable_starttls_auto: true
+      :address => "smtp.gmail.com",
+      :port => 587,
+      :domain => Rails.application.secrets.domain_name,
+      :user_name => Rails.application.secrets.email_username,
+      :password => Rails.application.secrets.email_password,
+      :autentication => :login,
+      :enable_starttls_auto => true
     }
 
     # ActionMailer Config
