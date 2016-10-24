@@ -1,14 +1,15 @@
 
 <h1>Post</h1>
 
-<p>
-  <strong>Post:</strong>
-  <%= @post.message %>
-</p>
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+<div class="show-site">
+  <p>
+    <strong>Post:</strong>
+    <%= @post.message %>
+  </p>
+    <% if flash[:notice] %>
+      <div class="notice alert alert-success" role="alert"><%= flash[:notice] %></div>
+    <% end %>
 
 
-<%= link_to 'Edit', edit_post_path(@post) %> | 
-<%= link_to 'Back', posts_path %>
+  <%= link_to 'Main page', root_path %>
+</div>
