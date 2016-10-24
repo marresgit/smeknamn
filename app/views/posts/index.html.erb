@@ -1,0 +1,21 @@
+<h1>List Posts</h1>
+
+<div class="main-div">
+  <table class="database-table">
+    <tr>
+      <th>Posts</th>
+      <th colspan="1"></th>
+    </tr>
+
+    <% @post.each do |posts| %>
+      <tr>
+        <td><%= posts.message %></td>
+        <td><%= link_to 'Show', post_path(posts) %></td>
+        <td><%= link_to 'Edit', edit_post_path(posts) %></td>
+        <td><%= link_to 'Delete', post_path(posts), 
+          method: :delete,
+          data: { confirm: 'Are you sure?'} %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
