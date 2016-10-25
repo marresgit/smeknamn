@@ -1,5 +1,5 @@
 class NamenicksController < ApplicationController
-  http_basic_authenticate_with name: "dhh", password: "secret"
+  http_basic_authenticate_with name: "adminlocal", password: "secretsofrails"
 
   def index
     @namenick = Namenick.all

@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  http_basic_authenticate_with name: "dhh", password: "secret", :except => [:new, :create]
+  http_basic_authenticate_with name: "adminlocal", password: "secretsofrails", :except => [:new, :create]
 
   def index
     @post = Post.all
