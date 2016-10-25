@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h3>Go ahead and search for names or nicknames</h3>
+  <h3>Sök på <u>Namn</u> eller <u>Smeknamn</u>!</h3>
 
   <div class="home-page">
     <div class="search-bar">
@@ -63,7 +63,7 @@
           </ul>
           <% end %>
         <% else %>
-          <p>There is no <%= params[:search] %> in the database .</p>
+          <div class="alert alert-danger" role="alert"><p>There is no <u><%= params[:search] %></u> in the database .</p></div>
         <% end %>
       <% end %>
     </div>
