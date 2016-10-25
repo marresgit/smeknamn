@@ -68,5 +68,10 @@
       <% end %>
     </div>
   </div>
+  <% if flash[:notice] %>
+    <div class="notice alert alert-success" role="alert"><%= flash[:notice] %></div>
+  <% end %>
+
 </div>
+
 

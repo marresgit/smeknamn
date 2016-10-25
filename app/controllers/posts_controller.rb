@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+  http_basic_authenticate_with name: "dhh", password: "secret", :except => [:new, :create]
 
   def index
     @post = Post.all
@@ -21,7 +22,7 @@ class PostsController < ApplicationController
 
   	if @post.save
       flash[:notice] = "Meddelandet har skickats"
-  	  redirect_to @post
+  	  redirect_to root_path
     else
       flash[:error] = 'Error: Meddelandet kunde inte skickas'
       render 'new'
