@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    <ul class="nav navbar-nav navbar-left">
+      <li class="front-banner"><%= link_to 'Smeknamn', root_path %></li>
+    </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="mainpath nav-text"><%= link_to '', root_path %></li>
+      <li class="sendinpath nav-text"><%= link_to 'SendIn', new_post_path %></li>
+    </ul>
+    <ul class="nav navbar-nav admin-hide">
+      <%= render "layouts/navadmin" unless @skip_navadmin %>
+    </ul>
+  </div><!--.container-->
+</nav><!--.nav-->
