@@ -2,7 +2,7 @@ class NamenicksController < ApplicationController
   http_basic_authenticate_with name: "adminlocal", password: "secretsofrails"
 
   def index
-    @namenick = Namenick.all
+    @namenick = Namenick.all.order('nickname ASC')
   end
 
   def show

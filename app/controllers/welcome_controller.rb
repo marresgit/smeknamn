@@ -14,8 +14,9 @@ class WelcomeController < ApplicationController
   end
 
   def admin
-    @nickname = Nickname.all
-    @namenick = Namenick.all
+    @nickname = Nickname.all.order('name ASC')
+    @namenick = Namenick.all.order('nickname ASC')
+    @post = Post.all.order("created_at DESC")
   end
 
 end

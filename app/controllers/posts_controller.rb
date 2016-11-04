@@ -1,8 +1,8 @@
 class PostsController < ApplicationController
   http_basic_authenticate_with name: "adminlocal", password: "secretsofrails", :except => [:new, :create]
-
+  
   def index
-    @post = Post.all
+    @post = Post.all.order("created_at DESC")
   end
 
   def show
@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @skip_navadmin = true
     @post = Post.new 
   end
 
