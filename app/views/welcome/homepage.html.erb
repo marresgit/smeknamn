@@ -4,13 +4,15 @@
 
   <div class="home-page">
     <div class="search-bar">
-      <%= form_tag(root_path, :method => "get", id: "search-form") do %>
-        <%= text_field_tag :search, params[:search] %>
-        <%= submit_tag "Search", :name => nil %>
-      <% end %>
+      <form class="form-wrapper cf">
+        <%= form_tag(root_path, :method => "get", id: "search-form") do %>
+          <div class="submit-button"><%= text_field_tag :search, params[:search] %></div>
+          <div class="submit-button"><%= submit_tag "Sök", :name => nil %></div>
+        <% end %>
+      </form>
     </div>
 
-    <div class="search-bar">
+    <div class="search-result">
       <% if params[:search].present? %>
         <% if @nickname.present? %>
           <% @nickname.each do |nicknames| %>
@@ -63,7 +65,7 @@
           </ul>
           <% end %>
         <% else %>
-          <div class="alert alert-danger" role="alert"><p>There is no <u><%= params[:search] %></u> in the database .</p></div>
+          <div class="alert alert-danger" role="alert"><p>Hittade inte <u><%= params[:search] %></u>. <p><b><%= link_to 'Skicka gärna in ditt förslag!', new_post_path %></b></p></p></div>
         <% end %>
       <% end %>
     </div>
