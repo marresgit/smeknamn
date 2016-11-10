@@ -25,11 +25,13 @@ h1 {
 }
 
 .search-result {
-  margin: auto;
+  margin: 0 auto;
   margin-top: 0cm;
   margin-bottom: 0cm;
   border-style: solid;
   border-width: 0px;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
 }
 
 ul {

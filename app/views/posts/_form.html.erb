@@ -2,12 +2,12 @@
   
   <div class="new_form">
     <p>
-      <%= f.label :message %><br>
-      <%= f.text_field :message %>
+      <%= f.label :meddelande %><br>
+      <%= f.text_field :message, :size =>70, :length => 100 %>
     </p>
 
     <p>
-      <%= f.submit %>
+      <%= f.submit "Skicka", :name => nil %>
     </p>
 </div>  
 
