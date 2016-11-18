@@ -42,11 +42,11 @@
         <% elsif @namenick.present? %>
           <% @namenick.each do |namenicks| %>
           <ul class="list-name">
-            <li class="sign"><h4>Name</h4></li>
+            <li class="sign"><h4>Namn</h4></li>
             <li class="list-group-item"><%= namenicks.nickname %></li>
           </ul>
           <ul class="list-nick">
-            <li class="sign"><h4>Nick</h4></li>
+            <li class="sign"><h4>Smeknamn</h4></li>
             <% if namenicks.nickname.present? %>
             <li class="list-group-item"><%= namenicks.namenick %></li>
             <% end %>
